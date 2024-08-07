@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        GIT_REPO_URL = 'https://github.com/InventorySupplyMgmnt/items-service.git'
+        GIT_REPO_URL = 'https://github.com/tausif7541/centralgit.git'
         GIT_CREDENTIALS_ID = 'Testing' // The ID of the GitHub credentials in Jenkins
         CONTAINER_NAME = 'testing'
     }
