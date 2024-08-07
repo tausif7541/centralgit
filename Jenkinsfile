@@ -7,14 +7,14 @@ pipeline {
 
     environment {
         GIT_REPO_URL = 'https://github.com/tausif7541/centralgit.git'
-        GIT_CREDENTIALS_ID = 'Testing' // The ID of the GitHub credentials in Jenkins
+        GIT_CREDENTIALS_ID = 'Tausif_123' // The ID of the GitHub credentials in Jenkins
         CONTAINER_NAME = 'testing'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                 git branch: 'main', credentialsId: "${GIT_CREDENTIALS_ID}", url: "${GIT_REPO_URL}"
+                 git branch: 'master', credentialsId: "${GIT_CREDENTIALS_ID}", url: "${GIT_REPO_URL}"
             }
         }
 
