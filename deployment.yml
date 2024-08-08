@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: testing-container
-        image: utek321/testing:17  # Replace with your actual image tag
+        image: utek321/testing:latest  # Pulls the latest image with the 'latest' tag
+        imagePullPolicy: Always  # Ensures the image is always pulled from the registry
         ports:
         - containerPort: 8081
