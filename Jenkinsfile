@@ -5,8 +5,8 @@ pipeline {
         GIT_REPO_URL = 'https://github.com/tausif7541/centralgit.git'
         GIT_CREDENTIALS_ID = 'Tausif_123'
         CONTAINER_NAME = 'testing'
-        DOCKER_HUB_CREDENTIALS_ID = 'dockerhub-credentials'
-        DOCKER_HUB_REPO = 'yourdockerhubusername/testing'
+        DOCKER_HUB_CREDENTIALS_ID = 'Doc_Hub'
+        DOCKER_HUB_REPO = 'Utek321/testing'
         KUBECONFIG_CREDENTIALS_ID = 'k8s-config'
     }
 
