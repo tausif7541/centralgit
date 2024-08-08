@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testing-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testing
+  template:
+    metadata:
+      labels:
+        app: testing
+    spec:
+      containers:
+      - name: testing
+        image: yourdockerhubusername/testing:${BUILD_ID}
+        ports:
+        - containerPort: 8081
