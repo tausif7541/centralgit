@@ -13,7 +13,7 @@ spec:
         app: testing
     spec:
       containers:
-      - name: testing
-        image: utek321/testing:${BUILD_ID}
+      - name: testing-container
+        image: utek321/testing:17  # Replace with your actual image tag
         ports:
         - containerPort: 8081
