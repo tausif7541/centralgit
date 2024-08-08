@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                 git branch: 'master', credentialsId: "${GIT_CREDENTIALS_ID}", url: "${GIT_REPO_URL}"
+                git branch: 'master', credentialsId: "${GIT_CREDENTIALS_ID}", url: "${GIT_REPO_URL}"
             }
         }
 
@@ -27,16 +27,15 @@ pipeline {
         stage('Clean Up') {
             steps {
                 script {
-                   sh """
-                if [ \$(docker ps -q -f name=${CONTAINER_NAME}) ]; then
-                    docker stop ${CONTAINER_NAME}
-                    docker rm -f ${CONTAINER_NAME}
-                fi
-                if [ \$(docker images -q ${CONTAINER_NAME}) ]; then
-                    docker rmi -f ${CONTAINER_NAME}
-                fi
-            """
-                    
+                    sh """
+                    if [ \$(docker ps -q -f name=${CONTAINER_NAME}) ]; then
+                        docker stop ${CONTAINER_NAME}
+                        docker rm -f ${CONTAINER_NAME}
+                    fi
+                    if [ \$(docker images -q ${CONTAINER_NAME}) ]; then
+                        docker rmi -f ${CONTAINER_NAME}
+                    fi
+                    """
                 }
             }
         }
@@ -44,8 +43,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-            def app = docker.build("${CONTAINER_NAME}")
-        }
+                    def app = docker.build("${CONTAINER_NAME}")
+                }
             }
         }
 
