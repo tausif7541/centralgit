@@ -6,7 +6,7 @@ pipeline {
         GIT_CREDENTIALS_ID = 'Tausif_123'
         CONTAINER_NAME = 'testing'
         DOCKER_HUB_CREDENTIALS_ID = 'Doc_Hub'
-        DOCKER_HUB_REPO = 'Utek321/testing'
+        DOCKER_HUB_REPO = 'utek321/testing'
         KUBECONFIG_CREDENTIALS_ID = 'k8s-config'
     }
 
